@@ -1,0 +1,1 @@
+web: gunicorn techsnap_forum.wsgi --log-file -

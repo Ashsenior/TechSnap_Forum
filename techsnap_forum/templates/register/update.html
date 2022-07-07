@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container col-lg-6">
+    <h1>Hey {{user}}, Become An Author</h1>
+    <form method="POST" action="." enctype="multipart/form-data">
+        {% csrf_token %}    
+    {{form|crispy}}
+        <input
+            type="submit"
+            class="btn btn-primary"
+            value="Update"
+            style="margin-block:50px;"
+        >
+    </form>
+</div>
+{% endblock content %}
